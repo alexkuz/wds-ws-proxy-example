@@ -24,6 +24,17 @@
   color: white;
 }
 
+.App-header ul {
+  text-align: left;
+  line-height: 2em;
+}
+
+.App-header pre {
+  display: inline;
+  border: 1px solid #666;
+  padding: 10px;
+}
+
 .App-link {
   color: #61dafb;
 }

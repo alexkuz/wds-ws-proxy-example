@@ -3,21 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  React.useEffect(() => {
+    const ws = new WebSocket('ws://localhost:3000/ws-proxy');
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <ul>
+          <li>Start the server with <pre>node src/server.js</pre></li>
+          <li>(Re)open this page</li>
+          <li>Dev server goes down with <pre>Error: read ECONNRESET</pre> error</li>
+          </ul>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
